@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Birthday</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<style>
+		body{
+			background-color: rgb(252, 220, 220);
+			font-family: Nunito;
+		}
+		
+		#wish{
+			/*float:left;*/
+			padding-top: 20px;
+			text-align: center;
+			font-size: 2.0em ;
+			/*margin-left: 75px;*/
+			color: black;
+		}
+		@keyframes heartbeat
+		{
+		  0%
+		  {
+		    transform: scale( .75 );
+		  }
+		  20%
+		  {
+		    transform: scale( 1 );
+		  }
+		  40%
+		  {
+		    transform: scale( .75 );
+		  }
+		  60%
+		  {
+		    transform: scale( 1 );
+		  }
+		  80%
+		  {
+		    transform: scale( .75 );
+		  }
+		  100%
+		  {
+		    transform: scale( .75 );
+		  }
+		}
+		#heart1
+		{
+		  display: none;
+		  float:left;
+		  width: 100px;
+		  height: 100px;
+		  animation: heartbeat 1s infinite;
+		}
+		#heart2
+		{
+		  float:right;
+		  width: 100px;
+		  height: 100px;
+		  /*-ms-transform: scale(0.6,0.6);  IE 9 
+  		  transform: scale(0.6,0.6);*/ 
+		  animation: heartbeat 1s infinite;
+		}
+	/*----------------------------------------*/
+	/*picture animation*/
+	/*----------------------------------------*/
+
+
+		.slideshow { 
+		  position: absolute;
+		  width: 100%;
+		  height: 100%;
+		  top: 15px;
+		  left:6px;
+		  z-index: 0;
+		  transform: scale(0.8, 0.8);
+		  list-style: none;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		.slideshow li { 
+		  background-size: contain;
+		  width: 100%;
+		  height: 100%;
+		  position: absolute;
+		  top: 30px;
+		  left: 6px;
+		  transform: scale(0.8, 0.8);
+		  background-position: 50% 50%;
+		  background-repeat: no-repeat;
+		  opacity: 0;
+		  z-index: 0;
+		  animation: imageAnimation 50s linear infinite; 
+		}
+
+		.slideshow li:nth-child(1) { 
+		  background-image: url(https://i.imgur.com/jBpt4Uz.jpg) 
+		}
+		.slideshow li:nth-child(2) { 
+		  background-image: url(https://i.imgur.com/yWd3XOM.jpg);
+		  animation-delay: 10s; 
+		}
+		.slideshow li:nth-child(3) { 
+		  background-image: url(https://i.imgur.com/y6fafi5.jpg);
+		  animation-delay: 20s; 
+		}
+		.slideshow li:nth-child(4) { 
+		  background-image: url(https://i.imgur.com/CFBLb6d.jpg);
+		  animation-delay: 30s; 
+		}
+		.slideshow li:nth-child(5) { 
+		  background-image: url(https://i.imgur.com/Tv1gCSl.jpg);
+		  animation-delay: 40s; 
+		}
+
+		@keyframes imageAnimation { 
+		  0% { 
+		    opacity: 0; 
+		    animation-timing-function: ease-in;
+		  }
+		  10% {
+		    opacity: 1;
+		    animation-timing-function: ease-out;
+		  }
+		  20% {
+		    opacity: 1
+		  }
+		  30% {
+		    opacity: 0
+		  }
+		}
+
+		/* Older browser support - .no-cssanimations class added by modernizr */
+		.no-cssanimations .slideshow li {
+		    opacity: 1;
+		}
+		p{
+			padding: 10px 10px 0px 30px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 37px;
+		}
+		.para{
+		  padding: 470px 10px 0px 30px;
+		}
+		.iframe-container{
+		  position: relative;
+		  width: 100%;
+		  padding-bottom: 56.25%; 
+		  height: 360px;
+		  margin-bottom: 20px;
+		}
+		.iframe-container iframe{
+		  position: absolute;
+		  top:0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		}
+		img {
+		  display: block;
+		  margin-left: auto;
+		  margin-right: auto;
+		  width: 80%;
+		}	
+		#bod{
+			border: 1px solid gray;
+		}
+		@media only screen and (min-width: 1000px){
+		.container{
+			margin-top: 25px;
+			padding-left: 100px;
+			padding-right: 100px;
+		}
+		#wish{
+			font-size: 3.5em ;
+		}
+		#heart1
+		{
+		  display: block;
+		}
+		p{
+			padding: 10px 10px 0px 30px;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 37px;
+		}
+		.para{
+		  padding: 520px 10px 0px 30px;
+		}
+		.meet{
+			width:50%;
+		}
+		
+		}
+		</style>	
+		</head>
+<body>
+	<div class="container">
+		<div class="row justify-content-center">
+		<div class="col-sm-2" id="heart1" >
+		  <img src="https://goo.gl/nN8Haf" width="100px">
+		</div>
+		<div class="col-sm-8">
+		<h1 id="wish">Happy birthday Love!</h1>
+		</div>
+		<div class="col-sm-2" id="heart2" >
+		  <img src="https://goo.gl/nN8Haf" width="100px">
+		</div>
+		</div>
+	<div>
+	<div class="container">
+		<ul class="slideshow">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<p class="para">&nbsp; &nbsp; &nbsp; &nbsp; First of All, I want to wish you a very happy birthday. HaHa! I guess this might be the first time wishing you this early in all these years.I know that the above pictures are from the previous year(2019).I know that was a good day and the memories will always be cherished.I wanted to make this day even better and coming years to be better and better further.But, I never expected something like this pandemic might ruin an important day of ours.But at the end it's what it is. And the only thing that I could do to make you feel this day a little special is by wishing you a better way and I came up with this.I know I am not creative or crafty as much as you&#128536;,but this is all I got and I hope you'll like it.I love you&#x1F49D;. 
+	</p>
+
+	<div class="iframe-container">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/tzl-q1-rNoQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p>I hope you liked the video, thank me later! &#128540; </p>
+	<div class="container">
+		<img src=https://images.unsplash.com/photo-1523251636652-de976ff82054?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80 alt="" class="meet">
+	</div>
+	<p>Today is the most blissful day of this entire lockdown.That's because after a constant wait of 134 days,We met today &#128519;.Tho that meet was only of few minutes that was worth my complete wait.I can't express how intruiged I was to meet you and then what peace my soul achieved by looking into your eyes.And the feeling I experienced when you were sobbing on call for missing me more after that meet was ecstatic.I don't know how long it takes this time for us to meet again.I feel sad about it, but i'll happily wait &#128522;.</p>
+	
+	</div>
+	<img src="https://i.imgur.com/omrLzOv.jpg" alt="" class="meet" id="bod">
+	<p>No matter how many fights we have.At the end of the day we both know, nothing can seperate us.You were my sunshine on the darkest day and I promise to be your shadow even in the dark.I love you to the moon and back&#x1F49D;.</p>
+	<p>Once Again Happy Birthday Love!</p>
+	<p>Yours ever loving,<br>
+	-kamal.bk &#128058;</p>
+	</p>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
